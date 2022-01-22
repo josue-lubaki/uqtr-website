@@ -30,7 +30,9 @@ export class AppComponent implements OnInit {
    * */
   generateScore(): Score[] {
     let scores = [];
-    // nombre aléatoire entre 40 et 100
+
+    // Math.floor(Math.random() * (max - min + 1) + min) -> max included
+    // Math.floor(Math.random() * (max - min) + min) -> max excluded
     scores.push(
       new Score('Anglais', Math.floor(Math.random() * (100 - 40)) + 40)
     );

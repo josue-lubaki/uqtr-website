@@ -26,19 +26,21 @@ export class DetailStudentComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     for (const propName in changes) {
-      const changedProp = changes[propName];
+      if(changes.hasOwnProperty(propName)){
+        const changedProp = changes[propName];
 
-      // S'intéresser au second changement
-      if (!changedProp.isFirstChange()) {
-        // Trouver la meilleur note
-        this.max = Math.max(
-          ...changedProp.currentValue.scores.map((score: Score) => score.value)
-        );
+        // S'intéresser au second changement
+        if (!changedProp.isFirstChange()) {
+          // Trouver la meilleur note
+          this.max = Math.max(
+            ...changedProp.currentValue.scores.map((score: Score) => score.value)
+          );
 
-        // Trouver la note la plus mediocre
-        this.min = Math.min(
-          ...changedProp.currentValue.scores.map((score: Score) => score.value)
-        );
+          // Trouver la note la plus mediocre
+          this.min = Math.min(
+            ...changedProp.currentValue.scores.map((score: Score) => score.value)
+          );
+        }
       }
     }
   }
