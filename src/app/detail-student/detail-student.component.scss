@@ -1,0 +1,41 @@
+.page {
+
+  td:last-child {
+    font-weight: bold;
+  }
+
+  .green {
+    color: green;
+  }
+
+  .red {
+    color: red;
+  }
+
+  .note{
+    color: darkred;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .page{
+    td {
+      display: table-cell !important;
+      border-left: 1px solid #e9ecef !important;
+      border-top: 1px solid #e9ecef !important;
+      border-bottom: 1px solid #e9ecef !important;
+    }
+
+    td:last-child {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    // donner la larguer de 70% aux premiers <td> du tableau
+    #wd-70 {
+      width: 70% !important;
+    }
+
+  }
+}

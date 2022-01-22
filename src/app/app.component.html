@@ -1,0 +1,38 @@
+<!--<h2>Ma Liste</h2>-->
+
+<!--<button type="button" (click)="addNumber()">Add Number</button>-->
+
+<!--<p *ngIf="numbers.length <= 0">La Liste est vide</p>-->
+
+<!--&lt;!&ndash; Ajouter la directive pour designer le min et max &ndash;&gt;-->
+<!--<ul>-->
+<!--  <li *ngFor="let n of numbers">{{ n }}</li>-->
+<!--</ul>-->
+
+<div class="page">
+  <div class="page-left">
+    <h3>La liste des étudiants</h3>
+    <p-table [value]="listStudent" styleClass="table-responsive">
+
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Full Name</th>
+          <th>Note Finale</th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-student>
+        <tr (click)="studentSelect(student)">
+<!--        <tr (click)="infoStudent.detail = student">-->
+          <td id="wd-70">{{student.fname}} {{student.lname}}</td>
+          <td class="note">{{student.scores | averange | notes}}</td>
+        </tr>
+      </ng-template>
+
+    </p-table>
+  </div>
+  <div class="page-right">
+        <app-detail-student [detail]="studentSelected"></app-detail-student>
+<!--    <app-detail-student #infoStudent></app-detail-student>-->
+  </div>
+</div>

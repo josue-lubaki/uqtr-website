@@ -1,0 +1,69 @@
+.page {
+  display: flex;
+  justify-content: space-around;
+
+  &-left {
+    width: 100%;
+    margin: 2rem 1rem;
+
+    h3 {
+      text-align: center;
+    }
+  }
+
+  &-right {
+    width: 100%;
+    margin: 2rem 1rem;
+  }
+
+  td {
+    cursor: pointer;
+  }
+
+  tr:hover{
+    background-color: rgba(190, 190, 190, 0.2)
+  }
+
+  .note{
+    color: darkred;
+    font-weight: bold;
+  }
+
+}
+
+@media screen and (max-width: 960px) {
+  .page {
+    justify-content: center;
+    flex-direction: column;
+
+    td {
+      display: table-cell !important;
+      border-left: 1px solid #e9ecef !important;
+      border-top: 1px solid #e9ecef !important;
+      border-bottom: 1px solid #e9ecef !important;
+    }
+
+    td:last-child {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    // donner la larguer de 70% aux premiers <td> du tableau
+    #wd-70 {
+      width: 70% !important;
+    }
+
+    &-left {
+      text-align: center;
+      margin-left: 0;
+      margin-top: 2rem;
+      margin-right: 3rem;
+    }
+
+    &-right{
+      margin-left: 0;
+      margin-top: 0;
+      margin-right: 3rem;
+    }
+  }
+}
