@@ -17,9 +17,13 @@
     <ng-template pTemplate="body" let-score>
       <tr>
         <td id="wd-70">{{score.name}}</td>
-        <td *ngIf="max == score.value" [ngClass]="'green'">{{score.value}}/100</td>
-        <td *ngIf="min == score.value" [ngClass]="'red'">{{score.value}}/100</td>
-        <td *ngIf="max != score.value && min != score.value">{{score.value}}/100</td>
+        <td
+          [ngClass]="
+            (max == score.value) ? 'green' :
+            (min == score.value) ? 'red' : ''"
+        >
+          {{score.value}}/100
+        </td>
       </tr>
     </ng-template>
   </p-table>
