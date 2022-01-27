@@ -1,0 +1,66 @@
+.page {
+  display: flex;
+  justify-content: space-around;
+
+  &-left {
+    width: 100%;
+    margin: 2rem 1rem;
+
+    h3 {
+      text-align: center;
+    }
+
+    th{
+      background-color: rgb(31, 31, 31) !important;
+      color: white;
+    }
+  }
+
+  tr:nth-child(2n+1){
+    background-color: rgb(230, 236, 245);
+  }
+
+  tr:nth-child(2n){
+    background-color: rgb(253, 253, 253);
+  }
+
+  td {
+    cursor: pointer;
+  }
+
+  tr:hover{
+    background-color: rgb(225, 212, 171);
+    transition: all 0.7s ease-in-out;
+    color: black;
+  }
+
+  .note{
+    color: darkred;
+    font-weight: bold;
+  }
+
+}
+
+@media screen and (max-width: 960px) {
+  .page {
+
+    td:last-child {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    // donner la larguer de 70% aux premiers <td> du tableau
+    .wd-70 {
+      width: 70% !important;
+      height: 0;
+    }
+
+    &-left {
+      text-align: center;
+      margin-left: 0;
+      margin-top: 2rem;
+      margin-right: 3rem;
+    }
+
+  }
+}

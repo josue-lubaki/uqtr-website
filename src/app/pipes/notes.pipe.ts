@@ -9,9 +9,9 @@ export class NotesPipe implements PipeTransform {
     if (value >= NOTE.Ap) {
       return 'A+';
     } else if (value >= NOTE.A) {
-      return 'B';
+      return 'A';
     } else if (value >= NOTE.Am) {
-      return 'C';
+      return 'A-';
     } else if (value >= NOTE.Bp) {
       return 'B+';
     } else if (value >= NOTE.B) {

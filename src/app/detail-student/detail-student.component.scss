@@ -1,4 +1,18 @@
 .page {
+  margin-top: 1rem;
+
+  th{
+    background-color: rgb(31, 31, 31) !important;
+    color: white;
+  }
+
+  tr:nth-child(2n+1){
+    background-color: rgb(230, 236, 245);
+  }
+
+  tr:nth-child(2n){
+    background-color: rgb(253, 253, 253);
+  }
 
   td:last-child {
     font-weight: bold;
@@ -20,6 +34,7 @@
 
 @media screen and (max-width: 960px) {
   .page{
+
     td {
       display: table-cell !important;
       border-left: 1px solid #e9ecef !important;

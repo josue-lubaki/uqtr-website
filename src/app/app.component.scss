@@ -1,69 +1,30 @@
 .page {
-  display: flex;
-  justify-content: space-around;
+  margin: 0.5rem 1rem 1rem 1rem;
 
-  &-left {
-    width: 100%;
-    margin: 2rem 1rem;
+  &-nav {
+    background-color: #7fade7;
+    padding: 1rem;
 
-    h3 {
-      text-align: center;
-    }
-  }
+    &-list {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 0;
 
-  &-right {
-    width: 100%;
-    margin: 2rem 1rem;
-  }
+      li {
+        padding: 0.5rem;
+        margin-right: 0.5rem;
+        font-size: 1.05rem;
+        font-weight: 500;
+        transition: all 0.4s ease-in-out;
 
-  td {
-    cursor: pointer;
-  }
-
-  tr:hover{
-    background-color: rgba(190, 190, 190, 0.2)
-  }
-
-  .note{
-    color: darkred;
-    font-weight: bold;
-  }
-
-}
-
-@media screen and (max-width: 960px) {
-  .page {
-    justify-content: center;
-    flex-direction: column;
-
-    td {
-      display: table-cell !important;
-      border-left: 1px solid #e9ecef !important;
-      border-top: 1px solid #e9ecef !important;
-      border-bottom: 1px solid #e9ecef !important;
-    }
-
-    td:last-child {
-      text-align: center;
-      font-weight: bold;
-    }
-
-    // donner la larguer de 70% aux premiers <td> du tableau
-    #wd-70 {
-      width: 70% !important;
-    }
-
-    &-left {
-      text-align: center;
-      margin-left: 0;
-      margin-top: 2rem;
-      margin-right: 3rem;
-    }
-
-    &-right{
-      margin-left: 0;
-      margin-top: 0;
-      margin-right: 3rem;
+        &:hover{
+          background-color: #e1d4ab;
+          cursor: pointer;
+          border-radius: 15px;
+        }
+      }
     }
   }
 }

@@ -1,0 +1,25 @@
+
+<div class="page">
+  <div class="page-left">
+    <h3>La liste des étudiants</h3>
+    <p-table [value]="listStudent" styleClass="table-responsive">
+
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Full Name</th>
+          <th>Note</th>
+          <th>Note Finale</th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-student>
+        <tr (click)="studentSelect(student)">
+          <td class="wd-70">{{student.fname}} {{student.lname}}</td>
+          <td class="wd-70">{{student.scores | averange}}/100</td>
+          <td class="note wd-70">{{student.scores | averange | notes}}</td>
+        </tr>
+      </ng-template>
+
+    </p-table>
+  </div>
+</div>
