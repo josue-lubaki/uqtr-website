@@ -2,6 +2,7 @@
   <ul>
     <li><b>Prénom : </b>{{detail.fname}}</li>
     <li><b>Nom : </b>{{detail.lname}}</li>
+    <li><b>Code Permanent : </b>{{detail.cp}}</li>
     <li><b>Moyenne Globale :</b>
       {{detail.scores | averange}}/100, <span class="note">{{detail.scores | averange | notes}}</span>
     </li>
@@ -20,8 +21,7 @@
         <td
           [ngClass]="
             (max == score.value) ? 'green' :
-            (min == score.value) ? 'red' : ''"
-        >
+            (min == score.value) ? 'red' : ''">
           {{score.value}}/100
         </td>
       </tr>

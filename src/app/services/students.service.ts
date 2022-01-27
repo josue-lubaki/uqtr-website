@@ -12,11 +12,11 @@ export class StudentsService {
   constructor() {
     this.listStudent = []
     this.listStudent.push(
-      new Student('Josue', 'Lubaki', 'LUBJ111111', this.generateScore()),
-      new Student('Jonathan', 'Gagnon', 'GAGJ111111', this.generateScore()),
-      new Student('Ismael', 'Coulibaly', 'COUI032145', this.generateScore()),
-      new Student('Jonathan', 'Kanyinda', 'KANJ111111', this.generateScore()),
-      new Student('Jordan', 'Kuibia', 'KUIJ111111', this.generateScore())
+      new Student('Josue', 'Lubaki', this.generateScore()),
+      new Student('Jonathan', 'Gagnon', this.generateScore()),
+      new Student('Ismael', 'Coulibaly', this.generateScore()),
+      new Student('Jonathan', 'Kanyinda', this.generateScore()),
+      new Student('Jordan', 'Kuibia', this.generateScore())
     );
   }
 
