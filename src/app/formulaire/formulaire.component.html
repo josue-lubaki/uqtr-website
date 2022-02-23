@@ -1,0 +1,40 @@
+<div class="formulaire">
+  <form [formGroup]="profileForm">
+    <h5>Info Personnel</h5>
+    <label>Prénom: <input type="text" formControlName="fname"></label>
+    <label>Nom: <input type="text" formControlName="lname"></label>
+    <div formGroupName="address">
+      <h5>Adresse</h5>
+      <label>Rue: <input type="text" formControlName="street"></label>
+      <label>Ville: <input type="text" formControlName="city"></label>
+      <label>Province: <input type="text" formControlName="state"></label>
+      <label>CP: <input type="text" formControlName="zip"></label>
+    </div>
+    <div formGroupName="contacts">
+      <h5>Contact</h5>
+      <label>Mobile: <input type="text" formControlName="mobile"></label><br><br>
+      <label>Domicile: <input type="text" formControlName="domicile"></label><br><br>
+      <label>Bureau: <input type="text" formControlName="bureau"></label><br><br>
+      <label>Skype: <input type="text" formControlName="skype"></label><br><br>
+      <label>Autre: <input type="text" formControlName="autre"></label>
+    </div>
+    <div formGroupName="contacts">
+      <h5>Contact</h5>
+      <label>Premier : <input type="text" formControlName="firstChoice"></label><br><br>
+      <label>Second : <input type="text" formControlName="secondChoice"></label><br><br>
+    </div>
+    <button type="submit" disabled="!profileForm.valid">Envoyer</button>
+
+<!--    <div formArrayName="contacts">-->
+<!--      <h5>Contact</h5>-->
+<!--      <div *ngFor="let contact of contacts?.controls; index as i">-->
+<!--        <label>-->
+<!--          Contact:{{contact[i].value}} <input type="text" formControlName="{{contact[i]}}">-->
+<!--        </label>-->
+<!--      </div>-->
+<!--    </div>-->
+  </form>
+
+  <p>{{profileForm.value | json}}</p>
+
+</div>

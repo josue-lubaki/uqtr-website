@@ -10,10 +10,12 @@ import {StudentsListsComponent} from "./students-lists/students-lists.component"
 import {DetailStudentComponent} from "./detail-student/detail-student.component";
 import {StudentsHomeComponent} from "./students-home/students-home.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import { FormulaireComponent } from './formulaire/formulaire.component';
 
 const routes : Routes = [
   { path : "lists", component: StudentsListsComponent },
   { path: "details/:cp", component: DetailStudentComponent },
+  { path: "formulaire", component: FormulaireComponent},
   { path: "", component: StudentsHomeComponent },
   { path : "**", component: PageNotFoundComponent }
 ]
